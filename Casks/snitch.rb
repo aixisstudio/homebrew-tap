@@ -9,8 +9,7 @@ cask "snitch" do
   version "1.0.1"
   sha256 "a013f9c0048f76ea8678ad4a502e147f547776c83704041c97822e18a96ba531"
 
-  url "https://github.com/aixisstudio/Snitch/releases/download/v#{version}/Snitch-#{version}-macos-arm64.zip",
-      verified: "github.com/aixisstudio/Snitch/"
+  url "https://github.com/aixisstudio/Snitch/releases/download/v#{version}/Snitch-#{version}-macos-arm64.zip"
   name "Snitch"
   desc "Local-first, privacy-focused real-time network traffic visualizer"
   homepage "https://aixisstudio.github.io/Snitch/"
