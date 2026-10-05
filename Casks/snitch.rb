@@ -27,7 +27,7 @@ cask "snitch" do
     # FR: Homebrew 7 a supprimé --no-quarantine ; on retire nous-mêmes
     #     l'attribut de quarantaine pour que Gatekeeper ne demande rien.
     #     `run` s'exécute sans sudo.
-    run "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "#{appdir}/Snitch.app"]
+    run "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "{{appdir}}/Snitch.app"]
   end
 
   # EN: On first launch Snitch asks for the admin password ONCE — the packet
