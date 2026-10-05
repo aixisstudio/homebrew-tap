@@ -1,11 +1,13 @@
 cask "snitch" do
   # EN: Snitch is not notarized (no paid Apple Developer ID), so Gatekeeper
-  #     still prompts on first open. Install with --no-quarantine to skip it:
-  #       brew install --cask --no-quarantine aixisstudio/tap/snitch
+  #     would prompt on first open. Homebrew 7 removed --no-quarantine, so
+  #     this cask strips the quarantine attribute itself in postflight —
+  #     installing from this tap is explicit user consent.
   # FR: Snitch n'est pas notarisé (pas de Developer ID payant), donc
-  #     Gatekeeper demande confirmation au premier lancement. Installer avec
-  #     --no-quarantine pour l'éviter :
-  #       brew install --cask --no-quarantine aixisstudio/tap/snitch
+  #     Gatekeeper demanderait confirmation au premier lancement. Homebrew 7
+  #     a supprimé --no-quarantine, donc ce cask retire lui-même l'attribut de
+  #     quarantaine en postflight — installer depuis ce tap est un
+  #     consentement explicite de l'utilisateur.
   version "1.0.1"
   sha256 "a013f9c0048f76ea8678ad4a502e147f547776c83704041c97822e18a96ba531"
 
@@ -19,6 +21,11 @@ cask "snitch" do
 
   app "Snitch.app"
 
+  postflight do
+    system_command "/usr/bin/xattr",
+                   args: ["-dr", "com.apple.quarantine", "#{appdir}/Snitch.app"]
+  end
+
   # EN: On first launch Snitch asks for the admin password ONCE — the packet
   #     capture backend needs it to observe network traffic (same as
   #     tcpdump/Wireshark). The UI itself stays unprivileged.
@@ -26,16 +33,12 @@ cask "snitch" do
   #     le backend de capture en a besoin pour observer le trafic réseau
   #     (comme tcpdump/Wireshark). L'UI reste non privilégiée.
   caveats <<~EOS
-    Snitch is ad-hoc signed, not notarized. If macOS says the app
-    "cannot be opened", run:  xattr -dr com.apple.quarantine "#{appdir}/Snitch.app"
-    (or install this cask with --no-quarantine).
     First launch asks for your admin password once — packet capture
-    requires it (same as tcpdump/Wireshark).
+    requires it (same as tcpdump/Wireshark). The app is ad-hoc signed
+    and already de-quarantined by this tap.
 
-    Snitch est signé ad-hoc, pas notarisé. Si macOS dit que l'app
-    « ne peut pas être ouverte », lancez : xattr -dr com.apple.quarantine "#{appdir}/Snitch.app"
-    (ou installez ce cask avec --no-quarantine).
     Le premier lancement demande une fois le mot de passe admin —
-    la capture de paquets l'exige (comme tcpdump/Wireshark).
+    la capture de paquets l'exige (comme tcpdump/Wireshark). L'app
+    est signée ad-hoc et déjà dé-quarantainée par ce tap.
   EOS
 end
