@@ -8,10 +8,10 @@ cask "snitch" do
   #     a supprimé --no-quarantine, donc ce cask retire lui-même l'attribut de
   #     quarantaine en postflight — installer depuis ce tap est un
   #     consentement explicite de l'utilisateur.
-  version "1.0.5"
-  sha256 "ad9937ec2c137e1174d1edf754259c1e76f147cf3db8abac28e31f643b8e7f9d"
+  version "1.0.7"
+  sha256 "04be6b3eb34e0f836484b772d76e51bb8acfc4fc43910f8d5571051b48270571"
 
-  url "https://github.com/aixisstudio/Snitch/releases/download/v#{version}/Snitch-#{version}-macos-arm64.zip"
+  url "https://github.com/aixisstudio/Snitch/releases/download/v#{version}/Snitch-macos-arm64.zip"
   name "Snitch"
   desc "Local-first, privacy-focused real-time network traffic visualizer"
   homepage "https://aixisstudio.github.io/Snitch/"
