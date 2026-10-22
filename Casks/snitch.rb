@@ -8,8 +8,8 @@ cask "snitch" do
   #     a supprimé --no-quarantine, donc ce cask retire lui-même l'attribut de
   #     quarantaine en postflight — installer depuis ce tap est un
   #     consentement explicite de l'utilisateur.
-  version "1.0.7"
-  sha256 "04be6b3eb34e0f836484b772d76e51bb8acfc4fc43910f8d5571051b48270571"
+  version "1.0.8"
+  sha256 "dbd9fb61c2f85438194b8a873a8f19a1b161bf980ddba015dc3a73bed0bd6f92"
 
   url "https://github.com/aixisstudio/Snitch/releases/download/v#{version}/Snitch-macos-arm64.zip"
   name "Snitch"
