@@ -1,11 +1,11 @@
 # Snitch — Homebrew formula template (rendered by release.yml →
-# aixisstudio/homebrew-tap). 1.6.3/024c3748681efd20893c8bb646c2127e3a272a43a3bcfc04ed9086c33e7e7355 are CI placeholders.
+# aixisstudio/homebrew-tap). 1.6.3/82030dee9cc43c9e07451b33b508198b4ceebca3597aa632607386905a931a2f are CI placeholders.
 # FR: Modèle de formule Homebrew (rendu par release.yml vers le tap).
 class Snitch < Formula
   desc "Local-first network observability and outbound firewall"
   homepage "https://github.com/aixisstudio/Snitch"
   url "https://github.com/aixisstudio/Snitch/archive/refs/tags/v1.6.3.tar.gz"
-  sha256 "024c3748681efd20893c8bb646c2127e3a272a43a3bcfc04ed9086c33e7e7355"
+  sha256 "82030dee9cc43c9e07451b33b508198b4ceebca3597aa632607386905a931a2f"
   license "AGPL-3.0-or-later"
   head "https://github.com/aixisstudio/Snitch.git", branch: "main"
 
