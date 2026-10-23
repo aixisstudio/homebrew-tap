@@ -1,7 +1,7 @@
 # Snitch — Homebrew formula (rendered by release.yml → aixisstudio/homebrew-tap).
 # FR: Formule Homebrew Snitch (rendue par release.yml vers le tap).
 class Snitch < Formula
-  desc "Local-first network observability and outbound firewall"
+  desc "Local-first application firewall and network observer"
   homepage "https://github.com/aixisstudio/Snitch"
   url "https://github.com/aixisstudio/Snitch/archive/refs/tags/v1.6.3.tar.gz"
   sha256 "61519c62ace149b0b2304c46f2f5732a2f380201bc7ec9ffb90f548733404391"
