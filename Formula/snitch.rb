@@ -4,7 +4,7 @@ class Snitch < Formula
   desc "Local-first application firewall and network observer"
   homepage "https://github.com/aixisstudio/Snitch"
   url "https://github.com/aixisstudio/Snitch/archive/refs/tags/v1.6.4.tar.gz"
-  sha256 "5308742c7ab258f1ee953a14d423fa4c318fd41f08cadfb7e422cb7b88ccabb1"
+  sha256 "e75861f325692c0fdfa5b26bd5d786683c4e518fdd03619a8bb44b7a5de25918"
   license "AGPL-3.0-or-later"
   head "https://github.com/aixisstudio/Snitch.git", branch: "main"
 
