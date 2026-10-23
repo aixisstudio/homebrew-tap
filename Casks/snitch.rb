@@ -13,7 +13,7 @@ cask "snitch" do
 
   url "https://github.com/aixisstudio/Snitch/releases/download/v#{version}/Snitch-macos-arm64.zip"
   name "Snitch"
-  desc "Local-first, privacy-focused real-time network traffic visualizer"
+  desc "Local-first, open-source application firewall and network monitor"
   homepage "https://aixisstudio.github.io/Snitch/"
 
   # EN: Apple Silicon only for now / FR: Apple Silicon uniquement pour l'instant
