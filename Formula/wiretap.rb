@@ -3,8 +3,8 @@
 class Wiretap < Formula
   desc "Local-first application firewall and network observer"
   homepage "https://github.com/aixisstudio/Wiretap"
-  url "https://github.com/aixisstudio/Wiretap/archive/refs/tags/v1.7.0.tar.gz"
-  sha256 "3f2b6158cbe38af86c98af7cee222413c0aa0a8ef01edab7c0bc6d122775a8f0"
+  url "https://github.com/aixisstudio/Wiretap/archive/refs/tags/v1.8.0.tar.gz"
+  sha256 "29c98cca906ac7783d8c9912a49543c641dd08beb5808d566c4ebcbbf89f0428"
   license "AGPL-3.0-or-later"
   head "https://github.com/aixisstudio/Wiretap.git", branch: "main"
 
